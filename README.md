@@ -16,12 +16,12 @@ This SOP systematically guides you through solving coding interview problems usi
 ### 📌 Step-by-step Process:
 - **Read the question out loud**.
 - **Clarify the following details**:
-  - **Constraints**: e.g., each number can only be used once.
-  - **Empty input**: is it possible? (Usually no, according to constraints.)
-  - **Number characteristics**: positive, negative, or both?
-  - **Time/space complexity**: any specific requirements (e.g., O(n) time & O(n) space)?
-  - **Preferred programming language**: clarify if Python or another language is preferred.
-  - **Approach**: pseudocode first or direct coding?
+  - **Constraints**: Can each number only be used once?
+  - **Empty input**: Can the input list be empty? is it possible? (Usually no, according to constraints.)
+  - **Number characteristics**: Can the numbers be positive, negative, or both?
+  - **Time/space complexity**: Is there any requirement on time/space complexity? (e.g., O(n) time & O(n) space)?
+  - **Preferred programming language**: Can I use Python to solve the problem or are there any languages you prefer me to use?
+  - **Approach**: Do you want me to write pseudocode first or just code the result out?
 - **Write down key rules clearly**: e.g., distinct integers, ascending order.
 
 ### Example Test Cases:
@@ -138,11 +138,3 @@ class Solution:
 - Was my solution efficient in terms of time and space?
 - Did I consider edge cases and validate my solution adequately?
 - Can my code readability or structure improve?
-
----
-
-## 🎯 **Key Takeaways (學習要點)**
-- UMPIRE method provides a systematic framework for solving problems.
-- Always clarify problem constraints thoroughly.
-- Use the most efficient data structures, particularly hashtables for quick lookups.
-- Aim for a one-pass solution to optimize complexity.
