@@ -1,31 +1,40 @@
-# pseudocode
+# 1. create a dictionary to store all elements inside the input list. Key: char, Value: index.
+# 2. for loop: store all of them
+# 3. for loop: iterate through the whole list
+#       find = target - nums[i]
+#       if find in dictionary:
+#         return [i, index of find]
 
-# Initialize:
-#   Create empty dictionary nums_map to store {number: index}
+# # Solution 1 
+# from typing import List
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         twoSumD = {}
+#         for index, value in enumerate(nums):
+#             twoSumD[value] = index 
 
-# Process:
-#   FOR each index, num in nums:
-#       Calculate diff = target - num
-#       IF diff exists in nums_map:
-#           RETURN [nums_map[diff], current_index]
-#       ELSE:
-#           Add num:index to nums_map
-#   
-#   IF no solution found:
-#       RETURN empty list
+#         for i, num in enumerate(nums):
+#             find = target - nums[i]
+#             if find in twoSumD and i != twoSumD[find]:
+#                 return [i, twoSumD[find]]
 
-# Solution
+
+# Solution 2 
 from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums_map = {}
+        twoSum = {}
+        #The purpose of twoSum is to store numbers that are waiting to be matched.
+
         for index, num in enumerate(nums):
-            diff = target - num
-            if diff in nums_map:
-                return [nums_map[diff], index]
-            else:
-                nums_map[num] = index
-        return []
+            find = target - num
+            if find in twoSum:
+                return [twoSum[find], index]
+            else: 
+                #Put num into twoSum and wait for a match.
+                twoSum[num] = index
+
+
 
 #test
 print(Solution().twoSum([2, 7, 11, 15], 9)) # [0, 1]
