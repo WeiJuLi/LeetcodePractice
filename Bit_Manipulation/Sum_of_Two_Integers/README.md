@@ -44,7 +44,7 @@ Identify suitable **Data Structures** or **Algorithms** if you're stuck.
 ---
 
 ## Plan (Pseudocode)
-![Sum of Two Integers](https://github.com/WeiJuLi/LeetcodePractice/Bit_Manipulation/Sum_of_Two_Integers/sumoftwoint.jpeg)
+![Sum of Two Integers](https://github.com/WeiJuLi/LeetcodePractice/blob/main/Bit_Manipulation/Sum_of_Two_Integers/sumoftwoint.jpeg)
 1. use XOR(^) does addition without carry
 2. AND(&) + Left Shift(<<) finds carry
 3. Repeat until no carry(b=0)
