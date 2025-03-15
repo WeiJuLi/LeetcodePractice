@@ -6,7 +6,7 @@
 - **Clarify the following details**:
  - _Can the input integer be empty?_ No, it must be an integer -2^31 <= x <= 2^31 - 1.
  - _Can the numbers be positive, negative, or both?_ Both
- - _Is there any requirement on time/space complexity?_ Yes, Time O(1), Spcae O(1)
+ - _Is there any requirement on time/space complexity?_ Yes, Time O(logX), Spcae O(1)
  - _Can I use Python to solve the problem or are there any languages you prefer me to use?_ Python is preferred
  - _Do you want me to write pseudocode first or just code the result out?_ I'll write pseudocode first
 
