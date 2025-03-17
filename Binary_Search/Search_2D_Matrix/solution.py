@@ -1,28 +1,44 @@
+# 1. If len(piles) == h : return max(piles) 
+# 2. We need to create two pointers. l = 1, r = max(piles) 
+# 3. While loop : keep narrowing our searching range. While l <= r: O(logm)
+#     4. a middle variable = (l + r) // 2 
+#     5. Calculate hours required with speed = middle 
+#     for loop: for each pile in piles: O(n)
+#         hours += ceil(pile / middle)
+#     6. Check if the total hours fit within h 
+#     If hours <= h:
+#         minK = middle # update minimum eating speed 
+#         r = middle - 1 # Try smaller speeds
+#     Else: 
+#         l = middle + 1 # Increase speed to reduce total hours
+
+# return minK
+
+
+
 # Solution 
 from typing import List
+import math
 
 class Solution:
-    def twoDBS(self, matrix: List[List[int]], target: int) -> bool:
-        rows, cols = len(matrix), len(matrix[0])
-        l, r = 0, (rows * cols - 1) 
+    def koBana(self, piles: List[int], h: int) -> int:
+        if len(piles) == h:
+            return max(piles)
+        l, r = 1, max(piles)
+        minK = max(piles)
 
         while l <= r:
             middle = (l + r) // 2 
-            # l = 0, r = 11, middle = 5 
-            # Convert middle index into 2D cooridinates 
-            # if middle = 5(start from index 0), row = 3, col = 4.
-            # matrix[1][1] 5 // 4 = 1, 5 % 4 = 1 
-
-            row = middle // cols  
-            col = middle % cols  
-
-            if matrix[row][col] == target:
-                return True
-            elif matrix[row][col] > target:
+            hours = 0
+            for pile in piles:
+                hours += math.ceil(pile / middle)
+            if hours <= h:
+                minK = min(minK, middle)
                 r = middle - 1 
-            else: 
+            else:
                 l = middle + 1 
-        return False 
+        return minK
 
-print(Solution().twoDBS([[1,2,4,8],[10,11,12,13],[14,20,30,40]], 12))
-print(Solution().twoDBS([[1]], 1))
+            
+print(Solution().koBana([1,4,3,2], 9)) #2 
+
