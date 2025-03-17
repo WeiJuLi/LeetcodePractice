@@ -52,7 +52,7 @@ We find that nums[middle] < nums[r] so smallest number must in the left half.
 2. While loop: l < r (最後再判斷，是l <= r還是l < r) O(logn)
     middle = (l + r) // 2 
     if nums[middle] < nums[r], the minimum must be in the left half, so set r = middle (Can not be middle - 1, which might out of bound)
-    Otherwise, the minimum must be in the right half, so let l = middle + 1 
+    Otherwise, the minimum must be in the right half, so let l = middle + 1. #nums[m] must bigger than nums[m + 1]
 3. While l == r, return nums[l]
 
 ### Dry run code : Happy case and Edge case 
