@@ -84,7 +84,7 @@ Return minDiff
 
 ### DFS Iteration 
 
-![photo](https://github.com/WeiJuLi/LeetcodePractice/blob/main/Binary_Search/Minimum Absolute Difference in BST/DFS_iter.jpg)
+![photo](https://github.com/WeiJuLi/LeetcodePractice/blob/main/Binary_Search/MinimumAbsoluteDifferenceinBST/DFS_iter.jpg)
 
 Initialize variables:
 
